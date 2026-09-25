@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weighted GPA Calculator | Fast & Accurate College Grade Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>College GPA Calculator</h1>
+            <p>Calculate your cumulative GPA and weighted grade point average in seconds.</p>
+        </header>
+
+        <main>
+            <div id="grades-container">
+                <div class="grade-row">
+                    <input type="text" class="course-name" placeholder="Course Name (optional)">
+                    <select class="letter-grade">
+                        <option value="4.0">A (93-100%)</option>
+                        <option value="3.7">A- (90-92%)</option>
+                        <option value="3.3">B+ (87-89%)</option>
+                        <option value="3.0">B (83-86%)</option>
+                        <option value="2.7">B- (80-82%)</option>
+                        <option value="2.3">C+ (77-79%)</option>
+                        <option value="2.0">C (73-76%)</option>
+                        <option value="1.0">D (60-69%)</option>
+                        <option value="0.0">F (Below 60%)</option>
+                    </select>
+                    <input type="number" class="credits" placeholder="Credits (e.g. 3)" min="1" max="6" value="3">
+                </div>
+            </div>
+
+            <button id="addRowBtn" class="btn-secondary">+ Add Course</button>
+            <button id="calculateBtn" class="btn-primary">Calculate GPA</button>
+
+            <div id="result-box" class="hidden">
+                <h2>Your GPA: <span id="final-gpa">0.00</span></h2>
+                <p id="feedback-message"></p>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
